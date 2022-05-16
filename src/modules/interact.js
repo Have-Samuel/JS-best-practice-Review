@@ -1,6 +1,6 @@
 import {
   status, removeTask, updateTask, removecompletedTask,
-} from './func.js';
+} from './func';
 
 const checkbox = document.querySelectorAll('input[type="checkbox"]');
 const taskName = document.querySelectorAll('.task-name');
