@@ -16,8 +16,7 @@ const checkMark = (input) => {
 
 checkbox.forEach((e) => checkMark(e));
 
-
-addTask();
+addTask(form);
 
 selectAtask();
 
