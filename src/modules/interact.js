@@ -1,6 +1,6 @@
 import {
-  status, removeTask, updateTask, removecompletedTask
-} from './func.js';
+  status, removeTask, updateTask, removecompletedTask,
+} from './func';
 
 const checkbox = document.querySelectorAll('input[type="checkbox"]');
 const taskName = document.querySelectorAll('.task-name');
@@ -19,9 +19,9 @@ const markTask = () => {
       if (checkbox[k].checked) {
         checkbox[k].classList.add('input-after');
         checkbox[k].nextElementSibling.classList.add('checked');
-        status(i, true);
+        status(k, true);
       } else {
-        checkbox[k].classList.remove('input-after')
+        checkbox[k].classList.remove('input-after');
         checkbox[k].nextElementSibling.classList.remove('checked');
         status(k, false);
       }
@@ -41,13 +41,11 @@ const selectAtask = () => {
         window.location.reload();
       });
       taskName[k].addEventListener('input', () => {
-        updateTask(i, taskName[k].value);
+        updateTask(k, taskName[k].value);
       });
     });
-  };
+  }
 };
-
-
 
 const clearCompletedTasks = () => {
   const clearButton = document.querySelector('.item-container__remove-all');
@@ -57,4 +55,6 @@ const clearCompletedTasks = () => {
   });
 };
 
-export { markTask, selectAtask, clearCompletedTasks };
+export {
+  markTask, selectAtask, clearCompletedTasks,
+};
