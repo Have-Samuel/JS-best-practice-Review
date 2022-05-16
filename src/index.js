@@ -1,6 +1,6 @@
 import './style.css';
-import { addTask } from './modules/func.js';
-import { clearCompletedTasks, markTask, selectAtask } from './modules/interact.js';
+import { addTask } from './modules/func';
+import { clearCompletedTasks, markTask, selectAtask } from './modules/interact';
 
 const form = document.querySelector('.item-container__list-content');
 
